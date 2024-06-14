@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/0fd63d4675.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Đặt vé xem phim</title>
+</head>
+ 
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">PHIMTONGHOPZzz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Trang quản lí phim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trang người dùng</a>
+                    </li>
+                </ul>
+                <form>
+                    <input class="form-control" type="text" placeholder="Tìm kiếm phim" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div align="center" class="title">
+        <h3>Lê Công Hưng-Nhóm 1 Hồ Thị Mê Ly=))
+        </h3>
+        <h3>TRANG QUẢN LÝ</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="input1">Tên phim:</label>
+                <input type="text" class="form-control" id="input1" placeholder="Nhập tên phim">
+            </div>
+            <div class="col-md-3">
+                <label for="input2">Số lượng vé:</label>
+                <input type="number" class="form-control" id="input2" placeholder="Nhập số vé">
+            </div>
+            <div class="col-md-3">
+                <label for="input3">Ngày chiếu:</label>
+                <input type="date" class="form-control" id="input3">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label for="input4">URL hình ảnh phim:</label>
+                <input type="url" class="form-control" id="input4" placeholder="Nhập URL">
+            </div>
+            <div class="col-md-6">
+                <label for="input5">Rạp chiếu:</label>
+                <input type="text" class="form-control" id="input5" placeholder="Nhập tên rạp chiếu">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-primary" id="btnSave" onclick="luudulieu()"> Lưu dữ liệu</button>
+                <button type="button" class="btn btn-secondary" id="btnCancel">Huỷ</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <h3>Danh sách phim</h3>
+        <table class="table table-striped filminfo">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Phim</th>
+                    <th>Rạp Chiếu</th>
+                    <th>Ngày Chiếu</th>
+                    <th>Thể loại</th>
+                    <th>Số Lượng Vé</th>
+                    <th>Hình Ảnh Phim</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Phim Đến Thượng Đế Cũng Phải Cười</td>
+                    <td>Rạp 1</td>
+                    <td>01-06-2024</td>
+                    <td>Hài Hước,Hành Động</td>
+                    <td>200</td>
+                    <td><img src="./R.jpg" alt="Phim Đến Thượng Đế Cũng Phải Cười" width="170"></td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Sửa</button>
+                        <button class="btn btn-danger btn-sm">Xoá</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>đấu phá thương khung (phần 5)</td>
+                    <td>Rạp 2</td>
+                    <td>02-06-2024</td>
+                    <td>Hoạt Hình 3D,Huyền Huyễn,Hành Động</td>
+                    <td>200</td>
+                    <td><img src="./OIP.jpg" alt="\đấu phá thương khung (phần 5)" width="100"></td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Sửa</button>
+                        <button class="btn btn-danger btn-sm">Xoá</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Vây Hãm</td>
+                    <td>Rạp 3</td>
+                    <td>03-06-2024</td>
+                    <td>Hành Động,Hài Hước,Hình Sự</td>
+                    <td>200</td>
+                    <td><img src="./vayham.jpeg" alt="Vây Hãm" width="100"></td>
+                    <td>
+                        <button class="btn btn-warning btn-sm">Sửa</button>
+                        <button class="btn btn-danger btn-sm">Xoá</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function luudulieu(){
+            let input1 = document.getElementById("input1").value;
+            if( input1 == ""){
+                alert("Cần nhập tên phim");
+                document.getElementById("input1").focus();
+                return;
+            }
+            alert("Tên phim là :" +  input1);
+        }
+
+        
+
+    </script>
+</body>
+</html>
